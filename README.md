@@ -13,8 +13,8 @@ Se evita el duplicado de código y de lógica de instancias, concentrándose en 
 
 
 ### Requerimiento 3: Gestor de configuración global
-Se utilizo el diseño **singleton**, con el objetivo de mantener una unica instacia utilizable por todas las clases, sin oportunidad de modificación. 
-El sistema tiene la necesita un punto de acceso unico para configuraciones globales, las cuales son
+Se utilizo el diseño **singleton**, con el objetivo de mantener una unica instacia utilizable por todas las clases, sin oportunidad de modificación.
+El sistema tiene la necesidad de un punto de acceso unico para configuraciones globales, las cuales son
   - La URL de la base de datos (String urlBd)
   - El nombre de usuario de la BD (String userBd)
   - El directorio de salida para los reportes (String pathReporte)
