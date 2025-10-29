@@ -11,6 +11,9 @@ Se evita el duplicado de código y de lógica de instancias, concentrándose en 
 
 ### Requerimiento 2: Construcción de los reportes
 
+Desarrollo:
+	Para este requerimiento se eligió el patrón de diseño builder, ya que este permite hacer un objeto más complejo a partir de constructores, todo esto ensamblado por un “director”, de esta forma se evita tener un constructor con 7 parámetros y valores null o múltiples constructores, obteniendo asi un código más limpio.
+
 
 ### Requerimiento 3: Gestor de configuración global
 Se utilizo el diseño **singleton**, con el objetivo de mantener una unica instacia utilizable por todas las clases, sin oportunidad de modificación.
