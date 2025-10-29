@@ -1,0 +1,36 @@
+classDiagram
+    class Reporte {
+        - String titulo
+        - String contenido
+        + Reporte(String, String)
+        + getTitulo() String
+        + getContenido() String
+        + toString() String
+    }
+
+    class Renderizador {
+        <<interface>>
+        + renderizar(Reporte)
+    }
+
+    class RenderizadorPDF {
+        + renderizar(Reporte)
+    }
+
+    class RenderizadorExcel {
+        + renderizar(Reporte)
+    }
+
+    class RenderizadorCSV {
+        + renderizar(Reporte)
+    }
+
+    class RenderizadorFactory {
+        + crearRenderizador(String) Renderizador
+    }
+
+    Renderizador <|.. RenderizadorPDF
+    Renderizador <|.. RenderizadorExcel
+    Renderizador <|.. RenderizadorCSV
+    RenderizadorFactory --> Renderizador
+    Renderizador --> Reporte
