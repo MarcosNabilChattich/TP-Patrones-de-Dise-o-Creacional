@@ -1,0 +1,28 @@
+@startuml
+
+title Diagrama de clase - Tp3_Requisito3.GestorConfiguracion (Patrón Singleton)
+
+package Tp3_Requisito3 {
+
+    class GestorConfiguracion {
+        - static GestorConfiguracion intanciaUnica
+        - String urlBd
+        - String userBd
+        - String pathReportes
+        --
+        - GestorConfiguracion()
+        + static GestorConfiguracion getInstanciaUnica()
+        + String getUrlBd()
+        + String getUserBd()
+        + String getPathReportes()
+    }
+
+    note top of GestorConfiguracion
+    Patrón Singleton:
+    - Solo una instancia en memoria
+    - Constructor privado
+    - Acceso global mediante getInstanciaUnica()
+    end note
+}
+
+@enduml
