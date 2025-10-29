@@ -1,0 +1,42 @@
+classDiagram
+    class Main {
+        +main(String[] args)
+    }
+
+    class Reporte {
+        -String titulo
+        -String cuerpoPrincipal
+        -String encabezado
+        -String pieDePagina
+        -LocalDate fecha
+        -String autor
+        -Orientacion orientacion
+        +toString() String
+    }
+
+    class ReporteBuilder {
+        -String titulo
+        -String cuerpoPrincipal
+        -String encabezado
+        -String pieDePagina
+        -LocalDate fecha
+        -String autor
+        -Orientacion orientacion
+        +ReporteBuilder(String titulo, String cuerpoPrincipal)
+        +conEncabezado(String encabezado) ReporteBuilder
+        +conPieDePagina(String pieDePagina) ReporteBuilder
+        +conFecha(LocalDate fecha) ReporteBuilder
+        +conAutor(String autor) ReporteBuilder
+        +conOrientacion(Orientacion orientacion) ReporteBuilder
+        +build() Reporte
+    }
+
+    class Orientacion {
+        <<enumeration>>
+        VERTICAL
+        HORIZONTAL
+    }
+
+    Reporte "1" *-- "1" ReporteBuilder : usa para crearse
+    Reporte o-- Orientacion : utiliza
+    Main --> Reporte : crea instancias
