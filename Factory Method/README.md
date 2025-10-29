@@ -5,5 +5,5 @@ Como el sistema requiere que se generen diversos tipos de reportes, cada uno tie
 Por lo tanto, cada fábrica o método fábrica tiene su propia responsabilidad: crear un renderizador acorde al formato solicitado, manteniendo la flexibilidad del sistema y respetando los principios de diseño orientado a objetos.
 Los problemas que se evitan utilizando este patrón son:
     - El alto acoplamiento de clases, es decir, el cliente solo va a interactuar con la interfaz común Renderizador.
-    - El sistema podrá agregar nuevos tipos de renderizados sin modifcar las clases ya existentes.
+    - Se pueden agregar nuevos tipos de renderizados sin modifcar las clases ya existentes.
     - Se evita el duplicado de código y de lógica de instancias, concentrandose en un único método de fábrica. 
